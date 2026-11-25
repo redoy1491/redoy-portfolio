@@ -16,7 +16,6 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Ashraful Islam Redoy",
-  description: "Medical AI Researcher & CSE Portfolio",
 };
 
 export default function RootLayout({
