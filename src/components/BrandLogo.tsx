@@ -1,0 +1,59 @@
+import { useId } from "react";
+
+interface BrandLogoProps {
+  size?: number;
+  className?: string;
+}
+
+export default function BrandLogo({ size = 32, className = "" }: BrandLogoProps) {
+  const uid = useId().replace(/:/g, "");
+  const bgId = `logoBg-${uid}`;
+  const accentId = `logoAccent-${uid}`;
+
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-hidden="true"
+    >
+      <defs>
+        <linearGradient id={bgId} x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#0f2942" />
+          <stop offset="100%" stopColor="#061121" />
+        </linearGradient>
+        <linearGradient id={accentId} x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#38bdf8" />
+          <stop offset="100%" stopColor="#2dd4bf" />
+        </linearGradient>
+      </defs>
+      <rect
+        x="3"
+        y="3"
+        width="58"
+        height="58"
+        rx="16"
+        fill={`url(#${bgId})`}
+        stroke={`url(#${accentId})`}
+        strokeWidth="2.5"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M10.5 44L17 21H21L27.5 44H23.6L22.1 38.5H15.9L14.4 44H10.5ZM16.8 35H21.2L19 26.8L16.8 35Z"
+        fill="#f0f8ff"
+      />
+      <circle cx="32.2" cy="18.2" r="2.4" fill="#2dd4bf" />
+      <rect x="30.1" y="23.5" width="4.2" height="20.5" rx="1.6" fill="#38bdf8" />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M38.8 21H46.1C49.9 21 52.3 23.1 52.3 26.5C52.3 29.1 50.7 31 48.2 31.6L52.8 44H48.4L44.2 32.1H42.9V44H38.8V21ZM42.9 24.4V28.7H45.8C47.5 28.7 48.3 27.9 48.3 26.55C48.3 25.2 47.5 24.4 45.8 24.4H42.9Z"
+        fill={`url(#${accentId})`}
+      />
+    </svg>
+  );
+}

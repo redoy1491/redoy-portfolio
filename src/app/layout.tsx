@@ -1,0 +1,47 @@
+import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "Ashraful Islam Redoy — Final Year CSE · AI/ML & Android Developer",
+  description:
+    "Portfolio of Ashraful Islam Redoy — 4th Year (Final Year) B.Sc. in CSE student at Daffodil International University, aspiring AI/ML Engineer & Android Developer.",
+  keywords: [
+    "Ashraful Islam Redoy",
+    "Machine Learning",
+    "Data Science",
+    "Android Developer",
+    "Daffodil International University",
+    "CSE Portfolio",
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${jakarta.variable} ${jetbrainsMono.variable} dark`}
+      suppressHydrationWarning
+    >
+      <body className="font-sans selection:bg-sky-500/20 selection:text-sky-300">
+        {children}
+      </body>
+    </html>
+  );
+}
