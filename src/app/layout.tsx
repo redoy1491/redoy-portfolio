@@ -15,17 +15,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ashraful Islam Redoy — Final Year CSE · AI/ML & Android Developer",
-  description:
-    "Portfolio of Ashraful Islam Redoy — 4th Year (Final Year) B.Sc. in CSE student at Daffodil International University, aspiring AI/ML Engineer & Android Developer.",
-  keywords: [
-    "Ashraful Islam Redoy",
-    "Machine Learning",
-    "Data Science",
-    "Android Developer",
-    "Daffodil International University",
-    "CSE Portfolio",
-  ],
+  title: "Ashraful Islam Redoy",
+  description: "Medical AI Researcher & CSE Portfolio",
 };
 
 export default function RootLayout({
