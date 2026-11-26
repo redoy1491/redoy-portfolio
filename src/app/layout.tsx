@@ -15,7 +15,26 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://redoy1491.vercel.app"),
   title: "Ashraful Islam Redoy",
+  openGraph: {
+    title: "Ashraful Islam Redoy",
+    url: "https://redoy1491.vercel.app",
+    type: "website",
+    images: [
+      {
+        url: "/og-logo.png",
+        width: 256,
+        height: 256,
+        alt: "AIR Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Ashraful Islam Redoy",
+    images: ["/og-logo.png"],
+  },
 };
 
 export default function RootLayout({
