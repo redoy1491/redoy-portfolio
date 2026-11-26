@@ -95,15 +95,15 @@ export default function CVModal({ open, onClose }: CVModalProps) {
               {PROFILE.name.toUpperCase()}
             </h3>
             <p className="text-[11px] font-medium text-sky-800">
-              Final-Year B.Sc. in CSE | Undergraduate Researcher — Medical AI
+              Final-Year Computer Science &amp; Engineering Student
             </p>
             <p className="mt-1 text-[11px] text-slate-600">
-              {PROFILE.location} | {PROFILE.phone} | {PROFILE.emailPrimary}
+              {PROFILE.location} | {PROFILE.emailPrimary}
             </p>
           </div>
 
           <p className="rounded-lg bg-slate-50 border border-slate-200 p-2.5 text-slate-700">
-            {PROFILE.summary}
+            Medical AI researcher with a strong interest in machine learning, deep learning, computer vision, and software development. Experienced in academic research, data analysis, and technology-driven solutions.
           </p>
 
           <div>
@@ -117,41 +117,6 @@ export default function CVModal({ open, onClose }: CVModalProps) {
                   <div className="text-slate-600">
                     {edu.institution} ({edu.period}) · {edu.grade}
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-bold uppercase tracking-wider text-sky-900 border-b border-slate-300 pb-1 mb-2">
-              Research Experience
-            </h4>
-            {EXPERIENCE.map((exp) => (
-              <div key={exp.role}>
-                <div className="font-semibold text-slate-950">{exp.role}</div>
-                <div className="text-slate-600">
-                  {exp.organization} ({exp.period})
-                </div>
-                <ul className="mt-1 list-disc pl-4 space-y-1 text-slate-700">
-                  {exp.points.map((pt) => (
-                    <li key={pt}>{pt}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div>
-            <h4 className="font-bold uppercase tracking-wider text-sky-900 border-b border-slate-300 pb-1 mb-2">
-              Research Works (2025 – Present)
-            </h4>
-            <div className="space-y-2">
-              {RESEARCH_WORKS.map((r, i) => (
-                <div key={r.id}>
-                  <div className="font-semibold text-slate-950">
-                    {i + 1}. {r.title}
-                  </div>
-                  <p className="text-slate-600">{r.summary}</p>
                 </div>
               ))}
             </div>
@@ -189,7 +154,23 @@ export default function CVModal({ open, onClose }: CVModalProps) {
 
           <div>
             <h4 className="font-bold uppercase tracking-wider text-sky-900 border-b border-slate-300 pb-1 mb-2">
-              Honors, Certifications &amp; Languages
+              Research Manuscripts
+            </h4>
+            <div className="space-y-2">
+              {RESEARCH_WORKS.map((r, i) => (
+                <div key={r.id}>
+                  <div className="font-semibold text-slate-950">
+                    {i + 1}. {r.title}
+                  </div>
+                  <p className="text-sky-800 italic">{r.period}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-bold uppercase tracking-wider text-sky-900 border-b border-slate-300 pb-1 mb-2">
+              Honors, Training &amp; Activities
             </h4>
             <ul className="list-disc pl-4 space-y-1 text-slate-700">
               {ACHIEVEMENTS.map((a) => (
@@ -200,6 +181,11 @@ export default function CVModal({ open, onClose }: CVModalProps) {
               {CERTIFICATIONS.map((c) => (
                 <li key={c.title}>
                   <strong>{c.title}</strong> — {c.issuer}
+                </li>
+              ))}
+              {EXPERIENCE.map((exp) => (
+                <li key={exp.role}>
+                  <strong>{exp.role}</strong> — {exp.organization}
                 </li>
               ))}
               <li>

@@ -10,13 +10,13 @@ export default function ResearchSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto">
           <span className="font-mono text-xs uppercase tracking-widest text-sky-600 dark:text-sky-400">
-            04 / Medical AI &amp; ML
+            04 / Publications &amp; Submissions
           </span>
           <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-4xl text-slate-950 dark:text-white">
-            Research Works
+            Research Manuscripts
           </h2>
           <p className="mt-2.5 text-sm text-slate-600 dark:text-slate-400">
-            Ongoing undergraduate research in healthcare prediction, multimodal deep learning, and medical computer vision.
+            Peer-reviewed healthcare and public health machine learning manuscripts currently under review.
           </p>
         </div>
 

@@ -136,7 +136,7 @@ export default function CredentialsSection({
               <div>
                 <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">
                   <Users className="h-4 w-4 text-teal-400" />
-                  Clubs, Languages &amp; Video Intro
+                  Memberships, Languages &amp; Intro
                 </div>
                 <p className="mt-3 text-xs sm:text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                   {CLUBS_AND_ACTIVITIES.join(" · ")}

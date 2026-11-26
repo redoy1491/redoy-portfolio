@@ -17,44 +17,46 @@ export default function ExperienceSection() {
           </h2>
         </div>
 
-        <div className="mt-10 max-w-4xl mx-auto space-y-5">
-          {EXPERIENCE.map((exp) => (
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
+          {EXPERIENCE.map((exp, idx) => (
             <motion.div
               key={exp.role}
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.3 }}
-              className="clean-card rounded-2xl p-6 sm:p-8"
+              transition={{ duration: 0.3, delay: idx * 0.05 }}
+              className="clean-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between"
             >
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                <div className="flex items-start gap-3.5">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400 shrink-0">
-                    <Briefcase className="h-5 w-5" />
+              <div>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="flex items-start gap-3.5">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-500/10 text-sky-500 dark:text-sky-400 shrink-0">
+                      <Briefcase className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-base sm:text-lg font-bold text-slate-950 dark:text-white">
+                        {exp.role}
+                      </h3>
+                      <p className="mt-0.5 text-sm font-medium text-sky-600 dark:text-sky-400">
+                        {exp.organization}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-base sm:text-lg font-bold text-slate-950 dark:text-white">
-                      {exp.role}
-                    </h3>
-                    <p className="mt-0.5 text-sm font-medium text-sky-600 dark:text-sky-400">
-                      {exp.organization}
-                    </p>
-                  </div>
+
+                  <span className="self-start rounded-full bg-slate-100/90 dark:bg-slate-800/80 px-3 py-1 font-mono text-xs text-slate-600 dark:text-slate-300 shrink-0">
+                    {exp.period}
+                  </span>
                 </div>
 
-                <span className="self-start rounded-full bg-slate-100/90 dark:bg-slate-800/80 px-3 py-1 font-mono text-xs text-slate-600 dark:text-slate-300 shrink-0">
-                  {exp.period}
-                </span>
+                <ul className="mt-5 space-y-2.5 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                  {exp.points.map((pt) => (
+                    <li key={pt} className="flex items-start gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-teal-500 dark:bg-teal-400 shrink-0" />
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-
-              <ul className="mt-5 space-y-2.5 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-                {exp.points.map((pt) => (
-                  <li key={pt} className="flex items-start gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-teal-400 shrink-0" />
-                    <span>{pt}</span>
-                  </li>
-                ))}
-              </ul>
             </motion.div>
           ))}
         </div>

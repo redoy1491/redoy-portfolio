@@ -1,24 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Briefcase, Code2, Microscope } from "lucide-react";
+import { Award, Briefcase, Microscope, Trophy } from "lucide-react";
 import { PROFILE } from "@/data/portfolio";
 
 const HIGHLIGHTS = [
   {
     icon: <Microscope className="h-5 w-5 text-sky-500 dark:text-sky-400" />,
     value: "Medical AI",
-    label: "Undergraduate Researcher",
+    label: "Researcher · DIU NLP Lab",
   },
   {
     icon: <Briefcase className="h-5 w-5 text-teal-500 dark:text-teal-400" />,
-    value: "2 Works",
-    label: "Active Research Studies",
+    value: "2 Papers",
+    label: "Under Review (BMC & Sci. Rep.)",
   },
   {
-    icon: <Code2 className="h-5 w-5 text-sky-500 dark:text-sky-400" />,
-    value: "7+ Projects",
-    label: "ML, Software & Systems",
+    icon: <Trophy className="h-5 w-5 text-sky-500 dark:text-sky-400" />,
+    value: "FinSphere AI",
+    label: "Finalist · Bonik Bondhu",
   },
   {
     icon: <Award className="h-5 w-5 text-teal-500 dark:text-teal-400" />,
@@ -56,13 +56,12 @@ export default function AboutSection() {
                 <span className="font-medium text-slate-800 dark:text-slate-200">{PROFILE.location}</span>.
               </p>
               <p>
-                My work sits at the intersection of{" "}
-                <span className="font-medium text-slate-900 dark:text-white">Machine Learning, Deep Learning, and Software Engineering</span>—with a strong focus on Medical AI, Computer Vision, and building dependable, real-world applications.
+                As a Medical AI researcher with strong experience in academic research, data analysis, and software development, I focus on machine learning, deep learning, computer vision, and building technology-driven solutions to real-world problems.
               </p>
               <p>
-                Beyond academics and research, I actively contribute to DIU’s{" "}
-                <span className="font-medium text-slate-800 dark:text-slate-200">Computer Programming Club, Data Science Club, Voluntary Service Club,</span> and{" "}
-                <span className="font-medium text-slate-800 dark:text-slate-200">Career Development Center</span>, sharpening my collaborative problem-solving and technical leadership.
+                Beyond coursework and research manuscripts, I am a member of the{" "}
+                <span className="font-medium text-slate-800 dark:text-slate-200">DIU NLP Lab, DIU Computer Programming Club,</span> and{" "}
+                <span className="font-medium text-slate-800 dark:text-slate-200">DIU Voluntary Service Club</span>, alongside teaching and competitive programming.
               </p>
               <p className="pt-1 text-xs sm:text-sm italic text-slate-500 dark:text-slate-400">
                 “{PROFILE.quotes.top}”

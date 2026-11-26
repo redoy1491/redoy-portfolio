@@ -2,8 +2,7 @@ export type ProjectCategory =
   | "All"
   | "AI & ML"
   | "Software & GUI"
-  | "Core CS & DSA"
-  | "Systems & Hardware";
+  | "Systems & Networking";
 
 export interface ProjectItem {
   id: string;
@@ -47,11 +46,11 @@ export interface EducationItem {
 export const PROFILE = {
   name: "Ashraful Islam Redoy",
   shortName: "Redoy",
-  headline: "Undergraduate Researcher (Medical AI) · Final Year CSE Student",
+  headline: "Medical AI Researcher · Final-Year CSE Student",
   university: "Daffodil International University",
   department: "Computer Science & Engineering",
   yearLabel: "4th Year (Final Year) CSE · July 2023 – Present",
-  cgpa: "3.87",
+  cgpa: "3.88",
   cgpaScale: "4.00",
   location: "Narsingdi, Dhaka, Bangladesh",
   shortLocation: "Dhaka, Bangladesh",
@@ -64,8 +63,8 @@ export const PROFILE = {
   videoResumeEmbedUrl: "https://www.youtube.com/embed/aaE62oMUvp4",
   videoResumeWatchUrl: "https://www.youtube.com/watch?v=aaE62oMUvp4",
   summary:
-    "Final-year Computer Science & Engineering undergraduate at Daffodil International University and Medical AI Researcher—focused on Machine Learning, Computer Vision, and engineering reliable software for real-world impact.",
-  goal: "To advance as an AI/ML Engineer and Researcher—developing explainable, reliable healthcare AI and practical software systems that make real-world impact.",
+    "Medical AI researcher and final-year CSE undergraduate at Daffodil International University—focused on machine learning, deep learning, computer vision, and building reliable technology-driven solutions.",
+  goal: "To apply research-driven AI, machine learning, and software engineering to build reliable and practical solutions for real-world challenges.",
   quotes: {
     top: "Building thoughtful, human-centered technology—one purposeful step at a time.",
     bottom:
@@ -81,90 +80,123 @@ export const PROFILE = {
 
 export const EXPERIENCE = [
   {
-    role: "Undergraduate Researcher — Medical Artificial Intelligence",
-    organization: "Daffodil International University",
+    role: "Medical AI Researcher",
+    organization: "Daffodil International University · DIU NLP Lab",
     period: "2025 – Present",
     points: [
-      "Developing machine learning and deep learning models for healthcare prediction and medical imaging research.",
-      "Working with multimodal clinical, EHR, MRI, genetic, and ophthalmic imaging datasets.",
-      "Applying Python, PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, and explainable AI techniques.",
+      "Conducting academic research in clinical prediction, public health machine learning, and medical imaging.",
+      "Applying Python, PyTorch, Scikit-learn, OpenCV, and Explainable AI (XAI) across real-world healthcare datasets.",
+      "Co-authoring peer-reviewed manuscripts currently under review at BMC Public Health and Scientific Reports.",
+    ],
+  },
+  {
+    role: "Teaching & Academic Instruction",
+    organization: "Private Tutoring & Coaching Center",
+    period: "Ongoing",
+    points: [
+      "Experienced in one-on-one private tutoring and structured classroom instruction at a coaching center.",
+      "Simplifying complex technical and analytical concepts for diverse student groups.",
     ],
   },
 ];
 
 export const RESEARCH_WORKS: ResearchItem[] = [
   {
-    id: "icu-readmission-ehr",
-    title: "ICU Readmission Prediction Using Electronic Health Records",
-    period: "2025 – Present",
-    domain: "Clinical ML",
-    summary:
-      "Developing ML models using MIMIC-IV EHR data for 30-day readmission prediction, including feature engineering, temporal patient-level splitting, imbalance handling, and explainable modeling.",
-    tags: ["MIMIC-IV", "Temporal Split", "Explainable AI"],
-  },
-  {
-    id: "child-stunting-wasting",
-    title: "Child Stunting and Wasting Prediction in Bangladesh",
-    period: "2025 – Present",
+    id: "child-stunting-wasting-bmc",
+    title:
+      "Spatial and cross-round evaluation of machine-learning classification of childhood stunting and wasting using demographic and household survey data in Bangladesh",
+    period: "BMC Public Health — Under review",
     domain: "Public Health AI",
     summary:
-      "Exploring machine learning approaches for child malnutrition prediction using Bangladesh DHS survey and geospatial information.",
-    tags: ["Bangladesh DHS", "Geospatial ML", "Tabular ML"],
+      "Evaluates spatial generalization and cross-round robustness of machine learning classifiers for childhood stunting and wasting using Bangladesh DHS data.",
+    tags: ["BMC Public Health", "Spatial ML", "Cross-Round Eval"],
+  },
+  {
+    id: "icu-mortality-scientific-reports",
+    title:
+      "Availability-aware evaluation of a tree-anchored neural residual for intensive care mortality prediction under recording delay and temporal shift",
+    period: "Scientific Reports — Under review",
+    domain: "Clinical ML",
+    summary:
+      "Investigates availability-aware tree-anchored neural residual modeling for ICU mortality prediction under clinical recording delays and temporal distribution shifts.",
+    tags: ["Scientific Reports", "Neural Residual", "Temporal Shift"],
   },
 ];
 
 export const TECH_STACK: TechCategory[] = [
   {
     id: "languages",
-    title: "Programming & Databases",
-    subtitle: "Core languages and relational data storage",
+    title: "Programming",
+    subtitle: "Core languages & algorithmic foundations",
     items: [
       { name: "Python" },
       { name: "Java" },
-      { name: "C / C++" },
+      { name: "C" },
+      { name: "C++" },
       { name: "SQL" },
-      { name: "MySQL" },
     ],
   },
   {
     id: "ml-ds",
-    title: "Machine Learning & Data",
-    subtitle: "Deep learning frameworks & scientific computing",
+    title: "AI, ML & Data",
+    subtitle: "Frameworks & scientific visualization",
     items: [
       { name: "PyTorch" },
-      { name: "TensorFlow" },
       { name: "Scikit-learn" },
-      { name: "Pandas & NumPy" },
       { name: "Matplotlib" },
+      { name: "Explainable AI (XAI)" },
+      { name: "Data Analysis" },
     ],
   },
   {
     id: "cv-methods",
-    title: "DL, CV & ML Methods",
-    subtitle: "Research & predictive modeling techniques",
+    title: "Computer Vision & ML Methods",
+    subtitle: "Deep learning & predictive modeling",
     items: [
       { name: "CNNs & Computer Vision" },
-      { name: "Medical Imaging & OpenCV" },
+      { name: "OpenCV & Medical Imaging" },
       { name: "Regression & Classification" },
-      { name: "Feature Selection & Clustering" },
-      { name: "Explainable AI (XAI)" },
+      { name: "Feature Selection" },
+      { name: "Clustering" },
     ],
   },
   {
     id: "tools",
-    title: "Tools & Version Control",
-    subtitle: "IDEs, experimentation & network simulation",
+    title: "Databases & Dev Tools",
+    subtitle: "Data storage, version control & IDEs",
     items: [
+      { name: "MySQL" },
       { name: "Git & GitHub" },
-      { name: "Google Colab" },
-      { name: "VS Code" },
-      { name: "IntelliJ & NetBeans" },
-      { name: "Cisco Packet Tracer & MATLAB" },
+      { name: "VS Code & Android Studio" },
+      { name: "IntelliJ IDEA & NetBeans" },
+      { name: "Cisco Packet Tracer" },
     ],
   },
 ];
 
 export const PROJECTS: ProjectItem[] = [
+  {
+    id: "bonik-bondhu-finsphere",
+    title: "Bonik Bondhu — AI-Powered SME Capital Engine",
+    subtitle: "International AI Builders Congress 2026 · FinSphere AI · Finalist",
+    category: "AI & ML",
+    featured: true,
+    summary:
+      "Built a bilingual SME AI platform for cash flow forecasts, loan optimization, risk analysis, and financial advisory.",
+    architectureFlow: [
+      "Bilingual SME Input",
+      "Cash Flow Forecasting",
+      "Risk & Loan Optimization",
+      "AI Financial Advisory",
+    ],
+    highlights: [
+      "Finalist at International AI Builders Congress 2026 (FinSphere AI track).",
+      "Provides bilingual (Bangla/English) financial advisory tailored for small and medium enterprises.",
+      "Combines cash flow forecasting, loan optimization, and automated risk analysis.",
+    ],
+    stack: ["Bilingual AI", "FinTech", "Forecasting", "Risk Analysis"],
+    githubUrl: "https://github.com/redoy1491",
+  },
   {
     id: "academic-performance-ml",
     title: "AI-Based Academic Performance Prediction",
@@ -172,19 +204,18 @@ export const PROJECTS: ProjectItem[] = [
     category: "AI & ML",
     featured: true,
     summary:
-      "Built a machine learning model to predict student academic performance using educational and demographic features, applying structured feature engineering and regression techniques.",
+      "Built a regression model with structured feature engineering to predict student academic performance.",
     architectureFlow: [
-      "Educational & Demographic Data",
+      "Student Data",
       "Feature Engineering",
       "Regression Modeling",
-      "Performance Prediction",
+      "Score Prediction",
     ],
     highlights: [
-      "Engineered predictive features from student academic and demographic attributes.",
-      "Trained and evaluated regression models to forecast academic outcomes.",
-      "Structured pipeline in Python for reproducible preprocessing and analysis.",
+      "Engineered predictive features from educational and demographic attributes.",
+      "Evaluated regression models in Python and Scikit-learn for reliable forecasting.",
     ],
-    stack: ["Python", "Scikit-learn", "Pandas", "Regression"],
+    stack: ["Python", "Scikit-learn", "Regression"],
     githubUrl: "https://github.com/redoy1491",
   },
   {
@@ -194,92 +225,28 @@ export const PROJECTS: ProjectItem[] = [
     category: "Software & GUI",
     featured: true,
     summary:
-      "Developed a Java Swing desktop application for library operations including book inventory, member registration, and borrowing/return with MySQL integrated via JDBC for CRUD operations.",
+      "Developed a database-driven desktop application for library operations with real-time CRUD operations.",
     architectureFlow: [
       "Java Swing UI",
-      "Validation & Controller",
+      "Application Logic",
       "JDBC Connector",
       "MySQL Database",
     ],
     highlights: [
-      "Real-time CRUD operations for book inventory, members, and issue/return workflows.",
-      "Integrated MySQL relational database cleanly through JDBC.",
-      "Built a structured desktop interface for efficient daily library management.",
+      "Real-time CRUD operations for book inventory, member records, and issue/return logs.",
+      "Integrated MySQL relational database cleanly via JDBC.",
     ],
     stack: ["Java", "Java Swing", "MySQL", "JDBC"],
     githubUrl:
       "https://github.com/redoy1491/Library-Management-System-GUI-Project-Java-Swing-MySQL",
   },
   {
-    id: "shopping-mall-management",
-    title: "Shopping Mall Management System",
-    subtitle: "Java OOP & Console Interface",
-    category: "Software & GUI",
-    summary:
-      "Developed a Java OOP management application (King's Mart) for organizing shopping mall operations, employee records, payroll, and store data.",
-    architectureFlow: [
-      "Console Menu CLI",
-      "OOP Domain Models",
-      "Payroll & Store Logic",
-      "Record Output",
-    ],
-    highlights: [
-      "Applies core OOP pillars: Encapsulation, Inheritance, and Polymorphism.",
-      "Modular classes separating employee roles, store records, and payroll computation.",
-    ],
-    stack: ["Java", "OOP", "Console I/O"],
-    githubUrl:
-      "https://github.com/redoy1491/King-s-Mart-E-Shopping-Management-System",
-  },
-  {
-    id: "restaurant-management-dsa",
-    title: "Restaurant Management System",
-    subtitle: "C/C++ Data Structures & Algorithms",
-    category: "Core CS & DSA",
-    summary:
-      "Developed a console-based management system (Foodie Manager) for handling restaurant-related operations and customer order records using Linked List, Stack, and Queue.",
-    architectureFlow: [
-      "Order Intake",
-      "Queue (FIFO Dispatch)",
-      "Linked List Records",
-      "Stack History",
-    ],
-    highlights: [
-      "Dynamic memory handling with Linked Lists instead of fixed arrays.",
-      "FIFO Queue modeling kitchen dispatch and Stack for action tracking.",
-    ],
-    stack: ["C / C++", "Linked List", "Queue", "Stack"],
-    githubUrl:
-      "https://github.com/redoy1491/Foodie-Manager-Project-in-C-Using-Data-Structure-Linked-List-",
-  },
-  {
-    id: "phonebook-management-c",
-    title: "Phonebook Management System",
-    subtitle: "C Structs & Persistent File Handling",
-    category: "Core CS & DSA",
-    summary:
-      "Developed an application in C for storing, searching, updating, and managing contact information with Linked Lists and persistent file handling.",
-    architectureFlow: [
-      "CLI Input",
-      "C Struct & Linked List",
-      "Search & Update",
-      "File I/O Storage",
-    ],
-    highlights: [
-      "Supports adding, searching, updating, and deleting structured contact records.",
-      "Persists contact data cleanly across sessions using C File I/O.",
-    ],
-    stack: ["C", "File I/O", "Linked List", "Structs"],
-    githubUrl:
-      "https://github.com/redoy1491/Phonebook-Management-System-Data-Structure-mini-project-linked-list-file-handling",
-  },
-  {
     id: "hybrid-network-routing",
-    title: "Cisco Network Project",
+    title: "Cisco Hybrid Network Project",
     subtitle: "Cisco Packet Tracer Simulation",
-    category: "Systems & Hardware",
+    category: "Systems & Networking",
     summary:
-      "Designed and configured a networking topology using Cisco Packet Tracer to demonstrate hybrid routing (RIP, OSPF, static routes) and multi-subnet connectivity.",
+      "Designed a multi-subnet network topology integrating dynamic (OSPF, RIP) and static routing protocols.",
     architectureFlow: [
       "LAN Subnets",
       "RIP Edge Routers",
@@ -288,29 +255,9 @@ export const PROJECTS: ProjectItem[] = [
     ],
     highlights: [
       "Configured RIP, OSPF, and static routing protocols across interconnected routers.",
-      "Verified IPv4 subnetting and end-to-end packet connectivity.",
+      "Verified IPv4 subnetting and end-to-end packet connectivity in Cisco Packet Tracer.",
     ],
     stack: ["Cisco Packet Tracer", "OSPF", "RIP", "Static Routing"],
-    githubUrl: "https://github.com/redoy1491",
-  },
-  {
-    id: "water-level-indicator",
-    title: "Water Level Indicator",
-    subtitle: "Electronics & Semiconductor Hardware",
-    category: "Systems & Hardware",
-    summary:
-      "Designed an academic hardware circuit using BJT transistors and diodes for monitoring water levels and indicating different threshold stages with LEDs.",
-    architectureFlow: [
-      "Tank Probes",
-      "BJT Switching Stage",
-      "Diode Logic",
-      "LED Level Display",
-    ],
-    highlights: [
-      "Uses BJT transistors as electronic switches without microcontroller overhead.",
-      "Clear multi-level LED visual alerts for water tank thresholds.",
-    ],
-    stack: ["BJT Transistors", "Diodes", "LEDs", "Circuit Design"],
     githubUrl: "https://github.com/redoy1491",
   },
 ];
@@ -318,49 +265,53 @@ export const PROJECTS: ProjectItem[] = [
 export const EDUCATION: EducationItem[] = [
   {
     degree: "B.Sc. in Computer Science & Engineering",
-    institution: "Daffodil International University",
-    period: "July 2023 – Present",
-    grade: "CGPA: 3.87 out of 4.00",
-    focus: "Focus on Machine Learning, Medical AI, Data Science & Software Engineering",
+    institution: "Daffodil International University, Dhaka",
+    period: "July 2023 – Present (Expected 2027)",
+    grade: "CGPA: 3.88 / 4.00",
+    focus: "Focus on Machine Learning, Medical AI, Computer Vision & Software Engineering",
   },
   {
-    degree: "Higher Secondary Certificate (HSC)",
+    degree: "Higher Secondary Certificate (HSC) — Science",
     institution: "Narsingdi Government College",
     period: "2021",
-    grade: "GPA: 5.00 out of 5.00",
+    grade: "GPA: 5.00 / 5.00",
     focus: "Science Group — Strong foundation in Mathematics & Science",
   },
   {
-    degree: "Secondary School Certificate (SSC)",
+    degree: "Secondary School Certificate (SSC) — Science",
     institution: "Satirpara K.K. Institution School & College",
     period: "2019",
-    grade: "GPA: 5.00 out of 5.00",
+    grade: "GPA: 5.00 / 5.00",
     focus: "Science Group — Perfect academic score",
   },
 ];
 
 export const ACHIEVEMENTS = [
   {
-    title: "Dean’s Award — Spring 2024",
+    title: "Dean’s Award (Spring 2024)",
     org: "Daffodil International University",
-    detail: "Recognized for outstanding academic standing in Computer Science & Engineering.",
+    detail: "Recognized for academic excellence in the Department of CSE.",
   },
   {
-    title: "DIU Takeoff & Unlock The Algorithm Contests",
-    org: "Competitive Programming Participant",
-    detail: "Active participant solving algorithmic and data structure challenges.",
+    title: "Finalist — DIU Unlock the Algorithm Programming Contest",
+    org: "Competitive Programming",
+    detail: "Reached the finals solving algorithmic and data structure problems.",
   },
   {
-    title: "Basic Computer Course",
-    org: "Government Youth Development Department, Bangladesh",
-    detail: "Completed foundational computing and productivity training.",
+    title: "Finalist — DIU Takeoff Programming Contest",
+    org: "Competitive Programming",
+    detail: "Finalist in university-wide competitive programming contest.",
   },
 ];
 
 export const CERTIFICATIONS = [
   {
-    title: "Computer Vision & Deep Learning for Medical Data Analysis",
-    issuer: "Health Informatics Research Lab, DIU",
+    title: "Machine Learning with Python",
+    issuer: "National Cyber Security Agency (NCSA)",
+  },
+  {
+    title: "Future in Code: AI & Machine Learning with Python",
+    issuer: "Creative IT Institute, in collaboration with DIU NLP & ML Research Lab",
   },
   {
     title: "Basic Computer Course",
@@ -369,10 +320,9 @@ export const CERTIFICATIONS = [
 ];
 
 export const CLUBS_AND_ACTIVITIES = [
+  "DIU NLP Lab",
   "DIU Computer Programming Club",
-  "DIU Data Science Club",
   "DIU Voluntary Service Club",
-  "Career Development Center (CDC)",
 ];
 
 export const LANGUAGES_SPOKEN = [

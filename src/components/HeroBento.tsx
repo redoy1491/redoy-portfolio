@@ -11,10 +11,10 @@ interface HeroBentoProps {
 }
 
 const ROLES = [
-  "Undergraduate Researcher — Medical AI",
-  "4th Year (Final Year) CSE at DIU",
-  "Machine Learning & Deep Learning",
-  "Aspiring AI Researcher & Engineer",
+  "Medical AI Researcher · DIU NLP Lab",
+  "Final-Year CSE Student at DIU",
+  "Machine Learning & Computer Vision",
+  "International AI Builders Finalist",
 ];
 
 export default function HeroBento({ onOpenVideo, onOpenCV }: HeroBentoProps) {
