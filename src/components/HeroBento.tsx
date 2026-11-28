@@ -99,37 +99,28 @@ export default function HeroBento({ onOpenVideo, onOpenCV }: HeroBentoProps) {
             </div>
           </motion.div>
 
-          {/* Right Portrait with subtle Orbit Ring */}
+          {/* Right Portrait with Circular Glass Frame & Orbit Ring */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.45, delay: 0.1 }}
-            className="lg:col-span-5 flex justify-center lg:justify-end"
+            className="lg:col-span-5 flex flex-col items-center lg:items-end"
           >
             <div className="relative p-4">
               {/* Subtle orbiting ring */}
-              <div className="orbit-ring pointer-events-none absolute inset-0 rounded-full border border-sky-400/20 dark:border-sky-400/15">
+              <div className="orbit-ring pointer-events-none absolute inset-0 rounded-full border border-sky-400/25 dark:border-sky-400/20">
                 <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-400 shadow-[0_0_14px_3px_rgba(56,189,248,0.65)]" />
                 <span className="absolute bottom-0 left-1/2 h-2 w-2 -translate-x-1/2 translate-y-1/2 rounded-full bg-teal-400 shadow-[0_0_10px_2px_rgba(45,212,191,0.55)]" />
               </div>
 
-              <div className="absolute inset-2 rounded-3xl bg-gradient-to-tr from-sky-500/25 via-teal-400/15 to-transparent blur-2xl" />
-              <div className="clean-card relative w-60 sm:w-72 md:w-80 rounded-3xl p-3 shadow-2xl">
-                <div className="overflow-hidden rounded-2xl bg-slate-800 aspect-[4/4.3]">
+              <div className="absolute inset-2 rounded-full bg-gradient-to-tr from-sky-500/25 via-teal-400/15 to-transparent blur-2xl" />
+              <div className="clean-card relative w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full p-2.5 shadow-2xl">
+                <div className="overflow-hidden rounded-full bg-slate-800 h-full w-full">
                   <img
                     src={PROFILE.avatarUrl}
                     alt={PROFILE.name}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover object-top"
                   />
-                </div>
-                <div className="mt-3 px-2 pb-1 flex items-center justify-between text-xs">
-                  <span className="font-medium text-slate-800 dark:text-slate-200">
-                    Medical AI · Final Year
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 font-mono text-teal-600 dark:text-teal-300">
-                    <span className="h-1.5 w-1.5 rounded-full bg-teal-400 animate-pulse" />
-                    DIU, Dhaka
-                  </span>
                 </div>
               </div>
             </div>
